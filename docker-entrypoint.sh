@@ -19,7 +19,7 @@ done
 db_version=$(bundle exec rake db:version)
 echo "$db_version"
 if [ "$db_version" = "Current version: 0" ]; then
-  bundle exec rake db:create
+  # bundle exec rake db:create
   bundle exec rake db:schema:load
   bundle exec rake db:migrate
   bundle exec rake db:seed
